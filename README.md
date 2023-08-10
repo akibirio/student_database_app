@@ -2,7 +2,7 @@
 
 An University Application to manage Student enrollments and balance
 
-## Folder Structure
+## Project Description
 
 The Application Does the following:
 
