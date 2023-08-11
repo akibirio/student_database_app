@@ -58,6 +58,10 @@ public class Student {
     }
 
     // View Balance
+    public void viewBalance(){
+        System.out.println("Your balance is: KES." + tuitionBalance);
+    }
+
     // Pay tution
 
     // show status
