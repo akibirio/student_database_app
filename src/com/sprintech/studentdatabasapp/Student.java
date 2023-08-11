@@ -8,9 +8,10 @@ public class Student {
     private String lastName;
     private int gradeYear;
     private String courses;
-    private int studentID;   
+    private String studentID;   
     private int tuitionBalance;
-    private int costOfCourse=600;
+    private static int costOfCourse=600;
+    private static int id = 1000;  //value belongs to the class, its true for all objects
 
     //Constructor prompts user to enter student's name and year
     public Student(){
@@ -23,14 +24,19 @@ public class Student {
 
         System.out.println("1- Freshmen\n2 - Sophmore\n3 - Junior\n4 - Senior\nEnter Student Class level: ");
         this.gradeYear=input.nextInt();
-
-        System.out.println( firstName + " " + lastName + " " + gradeYear);
-
-
+         setStudentID();
+        System.out.println( firstName + " " + lastName + " " + gradeYear + " "+ studentID);
+       
+        input.close();
     }
 
     //Generate an ID
+    private void setStudentID(){
+        //Grade Level + ID
+         id++;
+        this.studentID =  gradeYear + "" + id;
 
+    }
 
     //Enroll in courses
 
